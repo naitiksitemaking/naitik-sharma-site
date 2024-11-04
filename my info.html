@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Naitik Sharma - Future Coder</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f4; /* Light gray background */
+            color: #333; /* Dark text */
+            margin: 0;
+            padding: 20px;
+            line-height: 1.6;
+        }
+        header {
+            background-color: #007BFF; /* Blue header */
+            color: white;
+            padding: 20px;
+            text-align: center;
+            border-radius: 8px;
+        }
+        main {
+            margin: 20px auto;
+            padding: 20px;
+            max-width: 800px;
+            background-color: white; /* White background for main content */
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            color: #007BFF; /* Blue headings */
+        }
+        .challenge {
+            background-color: #f9f9f9; /* Light background for challenge */
+            padding: 15px;
+            border: 1px solid #007BFF;
+            border-radius: 8px;
+            margin: 20px 0;
+        }
+        footer {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 0.8em;
+            color: #777; /* Subtle text color */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Naitik Sharma</h1>
+        <p>A Passionate Student and Future Coder</p>
+    </header>
+
+    <main>
+        <section>
+            <h2>About Naitik</h2>
+            <p>Naitik is a dedicated student with a love for coding. His creativity and passion for programming inspire everyone around him. He enjoys tackling complex problems and crafting mind-blowing code that showcases his skills.</p>
+        </section>
+
+        <section>
+            <h2>Interactive Coding Challenge</h2>
+            <div class="challenge">
+                <p>Can you solve this simple coding puzzle? Write a function to find the factorial of a number.</p>
+                <textarea id="codeInput" rows="5" cols="40" placeholder="Write your code here..."></textarea>
+                <br>
+                <button onclick="runCode()">Run Code</button>
+                <div id="result"></div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Naitik Sharma. All rights reserved.</p>
+    </footer>
+
+    <script>
+        function runCode() {
+            const userInput = document.getElementById('codeInput').value;
+            try {
+                const factorialFunc = new Function('n', userInput);
+                const result = factorialFunc(5); // Test the function with an example input
+                document.getElementById('result').innerHTML = `Factorial of 5 is: ${result}`;
+            } catch (error) {
+                document.getElementById('result').innerHTML = 'Error: ' + error.message;
+            }
+        }
+    </script>
+</body>
+</html>
